@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Forest for the Trees</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+
+<body>  
+ <!-- Header -->  
+  <header id="home">
+   <!-- Logo -->
+   <div>
+     <a href="index.html">
+      <img src="images/5.jpg" id="logo">
+      </a> 
+      <h1>The Forest for the Trees</h1>
+      <input class="search" type="text">
+    </div>
+  </header>
+
+<!-- Navigation -->
+  <div id="navigation">
+    <nav>
+      <ul class="menu" id="myTopnav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="">Link3</a></li>
+        <li><a href="">Link4</a></li>
+      </ul>
+    </nav>
+  </div>   
+
+  <!-- Carousel section -->
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="images/1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/3.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/4.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="images/5.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <!-- A full width section -->       
+  <section class="full-width">
+   <div>
+     <h3>The Forest for the Trees</h3>
+   </div>  
+  </section>
+
+<!-- Accordian section -->  
+  <section class="accordion-container">
+  <div id="accordionimg">
+    <img alt="" src="images/1.jpg" 
+    style="width: 100%" id="imgContainer"/>
+  </div>  
+  <div>
+  <ul class='accordion'>
+      <li id="h1">
+          <label for='cp-1'>Forest 1</label>
+          <input type='radio' name='a' id='cp-1' checked='checked'>
+          <div class='content'>
+              <p>The Amazon rainforest is the largest and most biodiverse forest in the world. A conifer forest in the Swiss Alps (National Park). The Adirondack Mountains of Upstate New York form the southernmost part of the Eastern forest-boreal transition ecoregion.</p>
+              <br>
+              <br>
+          </div>
+      </li>
+      
+      <li id="h2">
+          <label for='cp-2'>Forest 2</label>
+          <input type='radio' name='a' id='cp-2'>
+          <div class='content'>
+              <p> A forest is a large area dominated by trees.[1] Hundreds of more precise definitions of forest are used throughout the world, incorporating factors such as tree density, tree height, land use, legal standing and ecological function.</p>
+              <br>
+              <br>
+          </div>
+      </li>
+      
+      <li id="h3">
+          <label for='cp-3'>Forest 3</label>
+          <input type='radio' name='a' id='cp-3'>
+          <div class='content'>
+              <p>Forests are the dominant terrestrial ecosystem of Earth, and are distributed across the globe. Forests account for 75% of the gross primary productivity of the Earth's biosphere, and contain 80% of the Earth's plant biomass.</p>
+              <br>
+              <br>
+          </div>
+      </li>
+      
+      <li id="h4">
+          <label for='cp-4'>Forest 4</label>
+          <input type='radio' name='a' id='cp-4'>
+          <div class='content'>
+              <p>Forests at different latitudes and elevations form distinctly different ecozones: boreal forests near the poles, tropical forests near the equator and temperate forests at mid-latitudes.</p>
+              <br>
+              <br>
+          </div>
+      </li>
+  </ul>
+  </div>    
+  </section>
+     
+    <!-- </div> -->
+    <div class="clear"/>
+    
+    <!-- Image grid section  -->
+    <section>
+    <div class="image-grid-container">
+      <div class="image-grid-item">
+        <div>
+          <img src="images/1.jpg" alt="">
+          <p>The wet dawn inks are doing their blue dissolve.</p>
+        </div>
+      </div>
+      <div class="image-grid-item">
+        <div>
+          <img src="images/2.jpg" alt="">
+          <p>On their blotter of fog the trees.</p>
+        </div>
+      </div>
+      <div class="image-grid-item">
+        <div>
+          <img src="images/3.jpg" alt="">
+          <p>Seem a botanical drawing.</p>
+        </div>          
+      </div>
+      <div class="image-grid-item">
+        <div>
+          <img src="images/4.jpg" alt="">
+          <p>They seed so effortlessly!</p>
+        </div>          
+      </div>
+      <div class="image-grid-item">
+        <div>
+          <img src="images/5.jpg" alt="">
+          <p>Tasting the winds, that are footless, waist-deep in history.</p>
+        </div>          
+      </div>
+      <div class="image-grid-item">
+        <div>
+          <img src="images/6.jpg" alt="">
+          <p>Full of wings, otherworldliness.</p>
+        </div>          
+      </div>
+    </div>
+    </section>
+
+  <!-- Footer section  -->       
+  <footer>
+    <p>Copyright 2018.</p>
+  </footer>
+  
+  <!-- JS for carousel -->  
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slides[slideIndex-1].style.display = "block";  
+        }
+      </script>  
+      
+      <!-- JS for change images -->        
+      <script language="javascript">
+        $("#h1").click(function() {
+          $("#imgContainer").attr('src', "images/1.jpg");
+        })
+        $("#h2").click(function() {
+          $("#imgContainer").attr('src', "images/2.jpg");
+        })
+        $("#h3").click(function() {
+          $("#imgContainer").attr('src', "images/3.jpg");
+        })
+        $("#h4").click(function() {
+          $("#imgContainer").attr('src', "images/4.jpg");
+        })
+      </script>
+
+      
+    </body>
+    </html>
